@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+        body {
+            background-color: #323975;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Muli', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            text-align: center;
+        }
+        h1{
+            margin: 20px auto;
+        }
+        .fa-snowflake{
+            animation: fall linear forwards;
+            color : white;
+            position: absolute;
+            top : -20px;
+
+        }
+        @keyframes fall{
+            to{
+                transform: translateY(105vh);
+            }
+        }
+        .countdown-container{
+            display: flex;
+            margin-left: 390px;
+        }
+        .time {
+            display: flex;
+            font-size: 1.2em;
+            flex-direction: column;
+            margin: 0 15px;
+            padding-bottom: 100px;
+        }
+        .time small {
+	        color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <i class="fas fa-snowflake"></i>
+
+    <div class="container">
+        <div class="row">
+            <h1>❄️ New Year is Coming! ❄️</h1>
+        </div>
+        <div class="countdown-container">
+            <div class="time">
+                <h1 id="days">00</h1>
+                <small>Days</small>
+            </div>
+            <div class="time">
+                <h1 id="hours">00</h1>
+                <small>Hours</small>
+            </div>
+            <div class="time">
+                <h1 id="minutes">00</h1>
+                <small>Minutes</small>
+            </div>
+            <div class="time">
+                <h1 id="seconds">00</h1>
+                <small>Seconds</small>
+            </div>
+        </div>
+    </div>
+    <script src="snow.js"></script>
+</body>
+</html>
